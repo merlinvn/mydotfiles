@@ -22,9 +22,8 @@ call minpac#add('altercation/vim-colors-solarized',{'type':'opt'})
 call minpac#add('lifepillar/vim-solarized8',{'type':'opt'})
 call minpac#add('k-takata/minpac',{'type':'opt'})
 
-command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
-command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
-
+command! PackUpdate call minpac#update()
+command! PackClean call minpac#clean()
 "let g:solarized_termcolors=256
 "let g:solarized_termtrans=0
 "let g:solarized_contrast="normal"
