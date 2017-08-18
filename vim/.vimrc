@@ -1,15 +1,32 @@
 filetype plugin indent on
 syntax on
-set background=light
-colorscheme solarized8_light
 
 set number
 set laststatus=2
 set modelines=5
-set vb t_vb=
-set ts=2 sts=2 sw=2 expandtab
 
+set noeb vb t_vb=
+
+set ts=2 sts=2 sw=2 expandtab
 set incsearch
 set nojoinspaces
 set display+=lastline
 
+packadd minpac
+call minpac#init()
+
+call minpac#add('tpope/vim-surround')
+call minpac#add('tpope/vim-unimpaired')
+call minpac#add('tpope/vim-scriptease',{'type':'opt'})
+call minpac#add('altercation/vim-colors-solarized',{'type':'opt'})
+call minpac#add('lifepillar/vim-solarized8',{'type':'opt'})
+call minpac#add('k-takata/minpac',{'type':'opt'})
+
+command! PackUpdate call minpac#update()
+command! PackClean call minpac#clean()
+
+"let g:solarized_termcolors=256
+"let g:solarized_termtrans=0
+"let g:solarized_contrast="normal"
+"colorscheme solarized8_dark
+set background=dark
