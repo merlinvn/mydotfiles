@@ -1,6 +1,4 @@
-cd vim/.vim/pack/minpac/opt
-git clone https://github.com/k-takata/minpac.git
+git clone https://github.com/k-takata/minpac.git ./vim/.vim/pack/minpac/opt/minpac
 
-cd ../../../..
-ln -s .vimrc ~/.vimrc
-ln -s .vim ~/.vim
+ln -s ~/mydotfiles/vim/.vimrc ~/.vimrc
+ln -s ~/mydotfiles/vim/.vim ~/.vim
